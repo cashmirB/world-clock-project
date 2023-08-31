@@ -11,14 +11,14 @@ function updateTime() {
     );
   }
 
-  let londonElement = document.querySelector("#london");
-  if (londonElement) {
-    let londonDateElement = londonElement.querySelector(".date");
-    let londonTimeElement = londonElement.querySelector(".time");
-    let londonTime = moment().tz("Europe/London");
+  let manilaElement = document.querySelector("#manila");
+  if (manilaElement) {
+    let manilaDateElement = manilaElement.querySelector(".date");
+    let manilaTimeElement = manilaElement.querySelector(".time");
+    let manilaTime = moment().tz("Asia/Manila");
 
-    londonDateElement.innerHTML = londonTime.format("MMMM Do YYYY");
-    londonTimeElement.innerHTML = londonTime.format(
+    manilaDateElement.innerHTML = manilaTime.format("MMMM Do YYYY");
+    manilaTimeElement.innerHTML = manilaTime.format(
       "H:mm:ss [<small>]A[</small>]"
     );
   }
@@ -26,6 +26,9 @@ function updateTime() {
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
+  if (cityTimeZone === "current") {
+    cityTimeZone = moment.tz.guess();
+  }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
