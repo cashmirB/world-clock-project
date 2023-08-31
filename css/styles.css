@@ -1,5 +1,7 @@
 body {
-  background: palegreen;
+  background-image: url("https://img.freepik.com/free-photo/old-fashioned-clockworks-symbolize-success-steampunk-industry-midnight-generated-by-ai_24640-102063.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -9,22 +11,25 @@ h1 {
 }
 
 h2 {
-  margin: 0 0 5px;
-  font-size: 28px;
+  margin: 0 0 10px;
+  font-size: 30px;
 }
 
 select {
   display: block;
   width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(246, 240, 240, 0.8);
   font-size: 18px;
   border-radius: 4px;
   padding: 10px;
 }
 
 .container {
-  max-width: 600px;
-  margin: 60px auto;
-  background: white;
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(246, 240, 240, 0.8);
   padding: 30px;
   border-radius: 10px;
 }
@@ -57,5 +62,9 @@ select {
 footer {
   text-align: center;
   font-size: 18px;
-  opacity: 0.6;
+  color: white;
+}
+
+a:hover {
+  color: white;
 }

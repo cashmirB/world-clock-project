@@ -11,6 +11,18 @@ function updateTime() {
     );
   }
 
+  let budapestElement = document.querySelector("#budapest");
+  if (budapestElement) {
+    let budapestDateElement = budapestElement.querySelector(".date");
+    let budapestTimeElement = budapestElement.querySelector(".time");
+    let budapestTime = moment().tz("Europe/Budapest");
+
+    budapestDateElement.innerHTML = budapestTime.format("MMMM Do YYYY");
+    budapestTimeElement.innerHTML = budapestTime.format(
+      "H:mm:ss [<small>]A[</small>]"
+    );
+  }
+
   let manilaElement = document.querySelector("#manila");
   if (manilaElement) {
     let manilaDateElement = manilaElement.querySelector(".date");
